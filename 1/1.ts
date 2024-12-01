@@ -5,9 +5,7 @@ const leftNumber = lines.map((l: string) => Number.parseInt(l.split(" ")[0]))
 const rightNumber = lines.map((r: string) => Number.parseInt(r.split("  ")[1]))
 const leftNumbersSorted = leftNumber.sort((n1, n2) => n1 - n2);
 const rightNumbersSorted = rightNumber.sort((n1,n2) => n1 - n2);
-//const pairs = leftNumber.map((l: number, i: number) => [l, rightNumber[i]])
 const sortedPairs = leftNumbersSorted.map((l:number, i:number) => [l, rightNumbersSorted[i]])
-//console.log(pairs)
 console.log(sortedPairs)
 const sumArray = []
 for (let i=0; i<sortedPairs.length; i++) {
@@ -22,6 +20,5 @@ for (let i=0; i<sortedPairs.length; i++) {
     }
 }
 
-//console.log(sumArray)
 const sum = sumArray.reduce((partialSum, a) => partialSum + a, 0)
 console.log(sum)

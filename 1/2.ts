@@ -23,7 +23,6 @@ function getOccurences(array: number[], value: number) {
 
 for (let i=0; i<leftNumbersSorted.length; i++) {
     const leftNumber = leftNumbersSorted[i]
-    const occurences = getOccurences(rightNumbersSorted, leftNumber)
     const similarityScore = leftNumber * getOccurences(rightNumbersSorted, leftNumber)
     sumArray.push(similarityScore)
 }

@@ -18,10 +18,9 @@
 
 const file = Bun.file("input.txt");
 const fileContent = await file.text();
-
-// horizontal
 const lines = fileContent.split("\n");
 const xmas = "XMAS";
+// damn this is dirty
 const samx = "SAMX";
 let count = 0;
 const wordLength = 4;
